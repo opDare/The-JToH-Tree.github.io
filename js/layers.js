@@ -262,6 +262,7 @@ addLayer("c", {
                 if (confirm("Are you sure you want to do this? You will lose clicks!") == true) 
                 {
                     player.c.points = 0;
+			save(true);
                     window.location.reload();
                 } 
                 
