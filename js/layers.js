@@ -262,7 +262,7 @@ addLayer("c", {
                 if (confirm("Are you sure you want to do this? You will lose clicks!") == true) 
                 {
                     player.c.points = 0;
-			save(true);
+			        save(true);
                     window.location.reload();
                 } 
                 
@@ -273,10 +273,7 @@ addLayer("c", {
         11: {
             title: "Double click",
             description: "Bau Bau",
-            cost: new Decimal(50),
-            unlocked() {
-                return (player.c.points >= 25) || hasUpgrade('c', 11)
-            }
+            cost: new Decimal(50)
         },
         12: {
             title: "Beat SoMD",
@@ -331,6 +328,7 @@ addLayer("a", {
         mult = new Decimal(0);
         if (hasAchievement('a', 11)) mult = mult.plus(1);
         if (hasAchievement('a', 12)) mult = mult.plus(1);
+		if (hasAchievement('a', 13)) mult = mult.plus(1);
         if (hasAchievement('a', 91)) mult = mult.plus(1);
         if (hasAchievement('a', 92)) mult = mult.plus(1);
         if (hasAchievement('a', 93)) mult = mult.plus(1);
